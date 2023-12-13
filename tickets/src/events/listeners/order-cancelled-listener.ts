@@ -16,8 +16,13 @@ export class OrderCancelledListener extends Listener<OrderCancelledEvents> {
   async onMessage(data: OrderCancelledEvents["data"], msg: Message) {
     let id: string;
     //@ts-ignore
-    const buf = Buffer.from(data.ticket.id!.data, "utf8");
-    id = buf.toString("hex");
+    if (!data.ticket.type) {
+      id = data.ticket.id;
+    } else {
+      //@ts-ignore
+      const buf = Buffer.from(data.ticket.id!.data, "utf8");
+      id = buf.toString("hex");
+    }
     const ticket = await Ticket.findById(id);
 
     if (!ticket) {
