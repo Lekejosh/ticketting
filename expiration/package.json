@@ -21,7 +21,7 @@
   "dependencies": {
     "@lekesktickets/common": "^1.1.2",
     "@types/bull": "^4.10.0",
-    "bull": "^4.11.5",
+    "bull": "^4.12.2",
     "node-nats-streaming": "^0.3.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.2"
