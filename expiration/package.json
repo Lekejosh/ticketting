@@ -20,7 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "@lekesktickets/common": "^1.1.2",
-    "@types/bull": "^4.10.0",
+    "@types/bull": "^4.10.4",
     "bull": "^4.11.5",
     "node-nats-streaming": "^0.3.2",
     "ts-node-dev": "^2.0.0",
